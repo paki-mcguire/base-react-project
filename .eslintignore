@@ -24,4 +24,5 @@ env.d.ts
 *.ntvs*
 *.njsproj
 *.sln
+*.svg
 *.sw?
