@@ -69,7 +69,7 @@ This template provides a base setup for a React project useing Typescript, SCSS,
 
 1.  install basic vitest dependencies
 
-    npm i -D vitest jsdom @testing-library/react @testing-library/jest-dom @vitest/coverage-v8
+         npm i -D vitest jsdom @testing-library/react @testing-library/jest-dom @vitest/coverage-v8
 
 2.  Vitest coverage setup:
 
@@ -94,27 +94,27 @@ This template provides a base setup for a React project useing Typescript, SCSS,
 
          // vitest.config.ts
          export default {
-         test: {
-         reporters: ['html']
-         }
+            test: {
+               reporters: ['html']
+            }
          }
 
 5.  set vitest scripts:
 
          // package.json
          "scripts": {
-         ...
-         "test": "vitest run",
-         "test:coverage": "vitest run --coverage",
-         "test:ui": "vitest --ui",
-         ...
+            ...
+            "test": "vitest run",
+            "test:coverage": "vitest run --coverage",
+            "test:ui": "vitest --ui",
+            ...
          },
 
 6.  Simple validation for vitest:
 
           // sum.js
           export function sum(a, b) {
-          return a + b
+             return a + b
           }
 
           // sum.test.js
@@ -122,7 +122,7 @@ This template provides a base setup for a React project useing Typescript, SCSS,
           import { sum } from './sum'
 
           test('adds 1 + 2 to equal 3', () => {
-          expect(sum(1, 2)).toBe(3)
+            expect(sum(1, 2)).toBe(3)
           })
 
     Try all test scripts.
@@ -198,8 +198,8 @@ This template provides a base setup for a React project useing Typescript, SCSS,
             parser: '@typescript-eslint/parser',
             plugins: ['react-refresh'],
             "settings": {
-            "react": {
-               version": "detect"
+               "react": {
+                  version": "detect"
                },
                "import/resolver": {
                   "node": {
