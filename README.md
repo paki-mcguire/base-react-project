@@ -1,6 +1,6 @@
 # React + TypeScript + SCSS + Vite + Vitest + ESLint/Prettier
 
-This template provides a base setup for a React project useing Typescript, SCSS, Vite with HMR, Vitest, ESLint rules (airbnb), and Prettier formatting.
+This template provides a base setup for a React project using Typescript, SCSS, vite with HMR, vitest, eslint rules (airbnb), and Prettier formatting.
 
 ## Step-by-step setup used for creating this React base project
 
@@ -65,7 +65,7 @@ This template provides a base setup for a React project useing Typescript, SCSS,
 
 ### Vitest
 
-- See: https://vitest.dev/guide/
+- See: <https://vitest.dev/guide/>
 
 1.  install basic vitest dependencies
 
@@ -281,8 +281,8 @@ This template provides a base setup for a React project useing Typescript, SCSS,
 
 4.  integrate ESLint and Prettier with VSCode (extensions)
 
-- https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-- https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode
+- <https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint>
+- <https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode>
 
          // .vscode/settings.json
          {
@@ -293,15 +293,15 @@ This template provides a base setup for a React project useing Typescript, SCSS,
 
   ESLint/Prettier intallation tutorial:
 
-  - https://dev.to/marcosdiasdev/adding-eslint-and-prettier-to-a-vitejs-react-project-2kkj
+  - <https://dev.to/marcosdiasdev/adding-eslint-and-prettier-to-a-vitejs-react-project-2kkj>
 
 ### Consider
 
 - eslint-config-airbnb
-  https://www.npmjs.com/package/eslint-config-airbnb
+  <https://www.npmjs.com/package/eslint-config-airbnb>
 
 - Husky - used to run lint and tests on commits
-  https://github.com/typicode/husky
+  <https://github.com/typicode/husky>
 
 - Intallation tutorial:
-  https://dev.to/marcosdiasdev/adding-eslint-and-prettier-to-a-vitejs-react-project-2kkj
+  <https://dev.to/marcosdiasdev/adding-eslint-and-prettier-to-a-vitejs-react-project-2kkj>
