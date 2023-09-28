@@ -2,6 +2,8 @@
 
 This template provides a base setup for a React project using Typescript, SCSS, vite with HMR, vitest, eslint rules (airbnb), and Prettier formatting.
 
+Note: All folders and files have been change to lowercase and simple test have been added. Testing with vitest of 'Demo' component has issues and is currently in process of being fixed.
+
 ## Step-by-step setup used for creating this React base project
 
 ### Create a React project with vite
