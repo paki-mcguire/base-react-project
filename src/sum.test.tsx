@@ -1,7 +1,11 @@
-// sum.test.js
-import { expect, test } from 'vitest'
-import { sum } from './sum'
+// sum.test.ts
+import { expect, describe, test } from 'vitest';
+import { sum } from './sum';
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3)
-})
+describe('sum function', () => {
+  test('adds 1 + 2 to equal 3', () => {
+    expect(sum(1, 2)).toBe(3);
+  });
+
+  // Add more test cases here if needed
+});
