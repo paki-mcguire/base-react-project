@@ -45,13 +45,13 @@ This template provides a base setup for a React project using Typescript, SCSS, 
 
     Simple validation for AntDesign
 
-          // App.tsx
+          // app.tsx
           import React from 'react';
           import { Button } from 'antd';
           ...
           const App: React.FC = () => (
 
-          <div className="App">
+          <div className="app">
              <Button type="primary">Button</Button>
           </div>
           );
