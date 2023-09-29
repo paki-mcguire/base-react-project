@@ -64,38 +64,38 @@ Note: All folders and files have been changed to lowercase and simple test have 
 
 ### Create a React project with vite
 
-1.  make sure that you have Node.js (v18 or later) installed
-2.  use npm to create the React project
+1.  Make sure that you have Node.js (v18 or later) installed
+2.  Use npm to create the React project
 
          npm create vite@latest base-react-project
 
-3.  change to the project directory
+3.  Change to the project directory
 
          cd base-react-project
 
-4.  install basic React dependencies
+4.  Install basic React dependencies
 
          npm install
 
-5.  compile and run the project
+5.  Compile and run the project
 
          npm run dev
 
 ### Setup SCSS
 
-1.  rename all .css files to .scss
-2.  update all import references with .css to .scss
-3.  install sass (scss preprocessor)
+1.  Rename all .css files to .scss
+2.  Update all import references with .css to .scss
+3.  Install sass (scss preprocessor)
 
          npm install -D sass
 
-4.  compile and run the project
+4.  Compile and run the project
 
           npm run dev
 
 ### Rename folders and files
 
-1.  Manually rename all folders, files. and file references to lowercase (kebab-case) but keep React component names uppercase.
+1.  Manually rename all folders, files. and file references to lowercase (kebab-case) but keep React component names camelcase (PascalCase).
 
     - Example
 
@@ -116,11 +116,11 @@ Note: All folders and files have been changed to lowercase and simple test have 
 
 ### AntDesign UI
 
-1.  install AntDesign dependencies
+1.  Install AntDesign dependencies
 
          npm install antd @ant-design/icons
 
-2.  import and use AntDesign components and styles as needed.
+2.  Import and use AntDesign components and styles as needed.
 
     Simple validation for AntDesign
 
@@ -138,7 +138,7 @@ Note: All folders and files have been changed to lowercase and simple test have 
 
     Note: You should import react、react-dom、dayjs before using antd.js
 
-3.  compile and run the project
+3.  Compile and run the project
 
             npm run dev
 
@@ -146,7 +146,7 @@ Note: All folders and files have been changed to lowercase and simple test have 
 
 - See: <https://vitest.dev/guide/>
 
-1.  install basic vitest dependencies
+1.  Install basic vitest dependencies
 
          npm i -D vitest jsdom @testing-library/react @testing-library/jest-dom @vitest/coverage-v8
 
@@ -163,13 +163,13 @@ Note: All folders and files have been changed to lowercase and simple test have 
              },
           })
 
-3.  install basic vitest ui dependencies
+3.  Install basic vitest ui dependencies
 
          npm i -D @vitest/ui
 
          http://localhost:51204/**vitest**/
 
-4.  create or update vitest.config.ts
+4.  Create or update vitest.config.ts
 
          // vitest.config.ts
          export default {
@@ -178,7 +178,7 @@ Note: All folders and files have been changed to lowercase and simple test have 
             }
          }
 
-5.  set vitest scripts:
+5.  Set vitest scripts:
 
          // package.json
          "scripts": {
@@ -189,11 +189,11 @@ Note: All folders and files have been changed to lowercase and simple test have 
             ...
          },
 
-6.  add 'jsdom' and jest global types
+6.  Add 'jsdom' and jest global types
 
          npm i -D @jest/globals jsdom
 
-7.  update 'vitest.config.ts'
+7.  Update 'vitest.config.ts'
 
          /// <reference types="vitest" />
 
@@ -215,12 +215,12 @@ Note: All folders and files have been changed to lowercase and simple test have 
             }
          })
 
-8.  create 'src/test/setup.js'
+8.  Create 'src/test/setup.js'
 
          // setup.js
          import '@testing-library/jest-dom'
 
-9.  Simple non-component validation for vitest:
+9.  Create non-component function files, 'src/sum.js' and 'src/sum.test.js', for validation of vitest:
 
           // sum.js
           export function sum(a, b) {
@@ -237,9 +237,9 @@ Note: All folders and files have been changed to lowercase and simple test have 
 
     Try all test scripts.
 
-10. Simple component setup, creation and validation for vitest:
+10. Create a simple React component for validation of vitest:
 
-    - create 'demo.tsx'
+    - Create 'src/demo.tsx'
 
           // demo.tsx
           import './demo.scss';
@@ -258,12 +258,12 @@ Note: All folders and files have been changed to lowercase and simple test have 
 
           export default Demo;
 
-    - create 'demo.scss'
+    - Create 'src/demo.scss'
 
           // demo.scss
           .demo {}
 
-    - create 'demo.test.tsx'
+    - Create 'src/demo.test.tsx'
 
           // demo.test.tsx
           import { describe, test, expect } from 'vitest';
@@ -286,11 +286,11 @@ Note: All folders and files have been changed to lowercase and simple test have 
 
 ### ESLint
 
-1.  install eslint dependencies:
+1.  Install eslint dependencies:
 
          npm install -D eslint prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser eslint-config-prettier eslint-plugin-import eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks
 
-2.  configure ESLint
+2.  Configure ESLint
 
          // .eslintrc.cjs
          {
@@ -421,7 +421,7 @@ Note: All folders and files have been changed to lowercase and simple test have 
          _.svg
          _.sw?
 
-3.  configure Prettier
+3.  Configure Prettier
 
          // .prettierrc
          {
@@ -436,7 +436,7 @@ Note: All folders and files have been changed to lowercase and simple test have 
 
          // .prettierignore (same as .elintignore)
 
-4.  integrate ESLint and Prettier with VSCode (extensions)
+4.  Integrate ESLint and Prettier with VSCode (extensions)
 
 - <https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint>
 - <https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode>
@@ -454,11 +454,18 @@ Note: All folders and files have been changed to lowercase and simple test have 
 
 ### Consider
 
-- eslint-config-airbnb
+- eslint-config-airbnb - a common eslint rules definition
+
   <https://www.npmjs.com/package/eslint-config-airbnb>
 
-- Husky - used to run lint and tests on commits
+- Husky - used to automatically run lint and tests upon every commit
+
   <https://github.com/typicode/husky>
 
-- Intallation tutorial:
+- Generate React CLI - simple React component and class generator:
+
+  <https://www.npmjs.com/package/generate-react-cli?activeTab=readme>
+
+- Installation tutorial:
+
   <https://dev.to/marcosdiasdev/adding-eslint-and-prettier-to-a-vitejs-react-project-2kkj>
