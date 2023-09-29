@@ -2,13 +2,65 @@
 
 This template provides a base setup for a React project using Typescript, SCSS, vite with HMR, vitest, eslint rules (airbnb), and Prettier formatting.
 
-Note: All folders and files have been change to lowercase and simple test have been added. Testing with vitest of 'Demo' component has issues and is currently in process of being fixed.
+Note: All folders and files have been changed to lowercase and simple test have been added.
 
 ## Step-by-step setup used for creating this React base project
 
-### Node and Final 'package.json'
+### Node version and final 'package.json'
 
-Using node v 18.18.0
+- 'node.js'
+
+      v 18.18.0
+
+- Final 'package.json' after step-by-step setup (this README)
+
+      // package.json
+      {
+         "name": "base-react-project",
+         "private": true,
+         "version": "0.0.0",
+         "type": "module",
+         "scripts": {
+            "dev": "vite",
+            "build": "tsc && vite build",
+            "test": "vitest run",
+            "test:coverage": "vitest run --coverage",
+            "test:ui": "vitest --ui",
+            "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+            "preview": "vite preview"
+         },
+         "dependencies": {
+            "@ant-design/icons": "^5.2.6",
+            "antd": "^5.9.3",
+            "react": "^18.2.0",
+            "react-dom": "^18.2.0"
+         },
+         "devDependencies": {
+            "@jest/globals": "^29.7.0",
+            "@testing-library/jest-dom": "^6.1.3",
+            "@testing-library/react": "^14.0.0",
+            "@types/react": "^18.2.15",
+            "@types/react-dom": "^18.2.7",
+            "@typescript-eslint/eslint-plugin": "^6.7.3",
+            "@typescript-eslint/parser": "^6.7.3",
+            "@vitejs/plugin-react": "^4.0.3",
+            "@vitest/coverage-v8": "^0.34.5",
+            "@vitest/ui": "^0.34.5",
+            "eslint": "^8.50.0",
+            "eslint-config-prettier": "^9.0.0",
+            "eslint-plugin-import": "^2.28.1",
+            "eslint-plugin-jsx-a11y": "^6.7.1",
+            "eslint-plugin-react": "^7.33.2",
+            "eslint-plugin-react-hooks": "^4.6.0",
+            "eslint-plugin-react-refresh": "^0.4.3",
+            "jsdom": "^22.1.0",
+            "prettier": "^3.0.3",
+            "sass": "^1.68.0",
+            "typescript": "^5.0.2",
+            "vite": "^4.4.5",
+            "vitest": "^0.34.5"
+         }
+      }
 
 ### Create a React project with vite
 
@@ -40,6 +92,27 @@ Using node v 18.18.0
 4.  compile and run the project
 
           npm run dev
+
+### Rename folders and files
+
+1.  Manually rename all folders, files. and file references to lowercase (kebab-case) but keep React component names uppercase.
+
+    - Example
+
+          // src/pages/home/home.tsx
+          import './home.scss';
+
+          const Home = () => {
+             return (
+                <div className="home" data-testid="Home">
+                   Home Component
+                </div>
+             );
+          };
+
+          export default Home; // must be camelcase (PascalCase)
+
+2.  This naming convention needs to be followed whenever creating new React components.
 
 ### AntDesign UI
 
@@ -208,6 +281,8 @@ Using node v 18.18.0
                 expect(demoElement).toHaveTextContent('Demo Component');
              });
           });
+
+- Note that in the test, the component React container with 'data-testid="Demo"' attribute can be accessed using 'getByTestId('Demo')'
 
 ### ESLint
 
