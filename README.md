@@ -6,6 +6,10 @@ Note: All folders and files have been change to lowercase and simple test have b
 
 ## Step-by-step setup used for creating this React base project
 
+### Node and Final 'package.json'
+
+Using node v 18.18.0
+
 ### Create a React project with vite
 
 1.  make sure that you have Node.js (v18 or later) installed
@@ -112,7 +116,38 @@ Note: All folders and files have been change to lowercase and simple test have b
             ...
          },
 
-6.  Simple validation for vitest:
+6.  add 'jsdom' and jest global types
+
+         npm i -D @jest/globals jsdom
+
+7.  update 'vitest.config.ts'
+
+         /// <reference types="vitest" />
+
+         // See: https://vitejs.dev/config/
+
+         import { defineConfig } from 'vite'
+         import react from '@vitejs/plugin-react';
+
+         export default defineConfig({
+            plugins: [react()],
+            test: {
+               globals: true,
+               coverage: {
+                  reporter: ["text"],
+                  provider: 'v8', // or 'istanbul'
+               },
+               environment: "jsdom",
+               setupFiles: "./src/tests/setup.js"
+            }
+         })
+
+8.  create 'src/test/setup.js'
+
+         // setup.js
+         import '@testing-library/jest-dom'
+
+9.  Simple non-component validation for vitest:
 
           // sum.js
           export function sum(a, b) {
@@ -128,6 +163,51 @@ Note: All folders and files have been change to lowercase and simple test have b
           })
 
     Try all test scripts.
+
+10. Simple component setup, creation and validation for vitest:
+
+    - create 'demo.tsx'
+
+          // demo.tsx
+          import './demo.scss';
+
+          // type DemoProps = {};
+
+          const Demo = () => {
+             // console.log('Demo props', props);
+
+             return (
+                <div className="demo" data-testid="Demo">
+                   Demo Component
+                </div>
+             );
+          };
+
+          export default Demo;
+
+    - create 'demo.scss'
+
+          // demo.scss
+          .demo {}
+
+    - create 'demo.test.tsx'
+
+          // demo.test.tsx
+          import { describe, test, expect } from 'vitest';
+          import { render, screen } from '@testing-library/react';
+          import '@testing-library/jest-dom';
+          import Demo from './demo';
+
+          describe('Demo component tests', () => {
+             test('renders the Demo component', () => {
+                render(<Demo />);
+
+                const demoElement = screen.getByTestId('Demo');
+
+                expect(demoElement).toBeInTheDocument();
+                expect(demoElement).toHaveTextContent('Demo Component');
+             });
+          });
 
 ### ESLint
 
