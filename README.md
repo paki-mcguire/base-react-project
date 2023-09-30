@@ -33,7 +33,8 @@ Note: All folders and files have been changed to lowercase and simple test have 
             "@ant-design/icons": "^5.2.6",
             "antd": "^5.9.3",
             "react": "^18.2.0",
-            "react-dom": "^18.2.0"
+            "react-dom": "^18.2.0",
+            "react-router-dom": "^6.16.0"
          },
          "devDependencies": {
             "@jest/globals": "^29.7.0",
@@ -57,8 +58,8 @@ Note: All folders and files have been changed to lowercase and simple test have 
             "prettier": "^3.0.3",
             "sass": "^1.68.0",
             "typescript": "^5.0.2",
-            "vite": "^4.4.5",
             "vitest": "^0.34.5"
+            "vite": "^4.4.5",
          }
       }
 
@@ -92,6 +93,12 @@ Note: All folders and files have been changed to lowercase and simple test have 
 4.  Compile and run the project
 
           npm run dev
+
+### Setup Router
+
+1.  Add react router
+
+         npm i react-router-dom --save
 
 ### Rename folders and files
 
